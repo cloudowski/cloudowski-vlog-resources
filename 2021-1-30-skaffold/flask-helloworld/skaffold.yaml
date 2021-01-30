@@ -1,0 +1,27 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+metadata:
+  name: flask-helloworld
+build:
+  artifacts:
+  - image: flask-helloworld
+    sync: 
+      infer: ["**/*"]
+
+deploy:
+  # kubectl:
+  #   manifests:
+  #   - k8s/base/deploy.yaml
+  kustomize:
+        paths:
+        - k8s/local
+
+profiles:
+  - name: aws
+    activation:
+      - kubeContext: aws-microkube
+    deploy:
+      kustomize:
+        paths:
+        - k8s/aws
+    
