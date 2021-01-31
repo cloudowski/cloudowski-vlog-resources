@@ -7,7 +7,7 @@ resources:
   - ../base
   - svc.yaml
 
-namePrefix: test3-
+namePrefix: test7-
 
 replicas:
   - count: 3
