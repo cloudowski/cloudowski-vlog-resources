@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
   # - ../base
-  - github.com/cloudowski/vlog-resources/kustomize?ref=helm-kustomize
+  - github.com/cloudowski/cloudowski-vlog-resources/kustomize?ref=helm-kustomize
   
 patchesStrategicMerge:
   - probes.yaml
