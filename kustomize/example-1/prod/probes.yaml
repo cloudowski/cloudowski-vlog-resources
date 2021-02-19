@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost
+spec:
+  template:
+    spec:
+      containers:
+      - name: ghost
+        readinessProbe:
+          httpGet:
+            port: 2368
+            path: /
+          initialDelaySeconds: 15
+        livenessProbe:
+          httpGet:
+            port: 2368
+            path: /
+          initialDelaySeconds: 30

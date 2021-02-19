@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost
+spec:
+  template:
+    spec:
+      containers:
+        - name: ghost
+          envFrom:
+          - configMapRef:
+              name: ghost-config

@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  # - ../base
+  - github.com/cloudowski/vlog-resources/kustomize?ref=helm-kustomize
+  
+patchesStrategicMerge:
+  - probes.yaml
+  - ghost-config.yaml
+  
+configMapGenerator:
+  - name: ghost-config
+    envs:
+      - myconfig.env
+
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    app: ghost
