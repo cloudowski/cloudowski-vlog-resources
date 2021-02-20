@@ -4,7 +4,7 @@ metadata:
   name: notImportantHere
 chartName: ghost
 chartRepoUrl: https://charts.bitnami.com/bitnami
-chartVersion: 12.1.2
+chartVersion: 12.2.1
 valuesMerge: merge
 releaseName: ghost
 values: ./values.yaml

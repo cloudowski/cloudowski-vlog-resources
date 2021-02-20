@@ -3,10 +3,8 @@ kind: Kustomization
 
 namespace: ghost-test
 
-bases:
-  - ../base
-  
 resources:
+  - ../base
   - ns.yaml
 
 images:

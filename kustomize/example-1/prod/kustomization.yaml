@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-bases:
+resources:
   - ../base
   # - github.com/cloudowski/cloudowski-vlog-resources/kustomize/example-1/base?ref=helm-kustomize
-  
+
 patchesStrategicMerge:
   - probes.yaml
   - ghost-config.yaml
@@ -18,3 +18,8 @@ generatorOptions:
   disableNameSuffixHash: true
   labels:
     app: ghost
+
+images:
+  - name: ghost
+    newName: bitnami/ghost
+    newTag: "3"

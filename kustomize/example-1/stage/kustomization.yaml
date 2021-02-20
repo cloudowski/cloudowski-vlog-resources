@@ -3,9 +3,7 @@ kind: Kustomization
 
 namespace: ghost-stage
 
-bases:
-  - ../base
-
 resources:
+  - ../base
   - ns.yaml
 

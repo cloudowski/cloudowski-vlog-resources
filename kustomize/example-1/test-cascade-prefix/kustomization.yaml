@@ -3,7 +3,7 @@ kind: Kustomization
 
 
 
-bases:
+resources:
   - ../test-legacy
   
 namePrefix: test123
