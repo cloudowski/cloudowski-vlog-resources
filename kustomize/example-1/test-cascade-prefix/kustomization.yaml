@@ -6,4 +6,4 @@ kind: Kustomization
 resources:
   - ../test-legacy
   
-namePrefix: test123
+namePrefix: test123-
